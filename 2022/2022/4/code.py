@@ -3,7 +3,7 @@
 # Date = December 2022
 
 with open((__file__.rstrip("code.py")+"input.txt"), 'r') as input_file:
-    input = input_file.read()
+    input = input_file.read().split('\n')
 
 # Modules #    
 import time
