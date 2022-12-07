@@ -3,19 +3,21 @@
 # Date = December 2022
 
 # Modules #
+import os
 import time
 import sys
 import numpy as np
 import pandas as pd
 
 # Read file # 
-input_file = open("input.txt", 'r')
+fname = os.getcwd()+'/2022/2022/6/'
+input_file = open(fname+"input.txt", 'r')
 input = input_file.read()
 #input = "mjqjpqmgbljsphdztnvjfqwrcgsmlb" # Should be 7
 
 # Functions #
 def find_marker(input_array, numb):
-  
+
   if len(input_array) < 4:
     print("Must contain at least 4 signals")
     sys.exit()
@@ -26,7 +28,7 @@ def find_marker(input_array, numb):
     if len(np.unique(sub))==numb: 
       marker = i
       break
-    
+      
   return marker
   
 #### Part I ####
